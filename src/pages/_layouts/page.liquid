@@ -1,0 +1,20 @@
+{% layout "./html.liquid" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  {{ block.super }}
+{% endblock head %}
+
+
+{% block body %}
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <main>
+    {{ content | raw }}
+  </main>
+  <footer>
+    <p>&copy; Nils Hesse &amp; <a href="https://cirrus.twiddles.com/">James Nash</a>.</p>
+  </footer>
+{% endblock content %}

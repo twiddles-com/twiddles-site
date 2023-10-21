@@ -1,0 +1,37 @@
+{
+  "name": "@twiddles/website",
+  "version": "2.0.0",
+  "description": "The main Twiddles website",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "site:build": "eleventy",
+    "site:serve": "eleventy --serve",
+    "styles:build": "sass src/styles/index.scss dist/styles.css",
+    "styles:watch": "sass --watch src/styles/index.scss dist/styles.css",
+    "build": "npm-run-all *:build",
+    "start": "npm-run-all --parallel site:serve styles:watch",
+    "clean": "del dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/twiddles-com/twiddles-site.git"
+  },
+  "keywords": [
+    "website",
+    "twiddles",
+    "coming-soon"
+  ],
+  "author": "James Nash (https://cirrus.twiddles.com/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/twiddles-com/twiddles-site/issues"
+  },
+  "homepage": "https://www.twiddles.com/",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "del-cli": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.69.4"
+  }
+}
