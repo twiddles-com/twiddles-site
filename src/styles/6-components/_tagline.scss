@@ -1,0 +1,6 @@
+@use '../1-settings/typography';
+
+.twid-tagline {
+  font-size: typography.$font-size-06;
+  text-align: center;
+}

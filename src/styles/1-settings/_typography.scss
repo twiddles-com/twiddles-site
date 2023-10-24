@@ -1,0 +1,17 @@
+// From https://systemfontstack.com/
+$font-primary: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+$line-height-default: 1.4;
+
+$_multiplier: 1.333;
+$_base: 1rem;
+
+// Font-size scale
+$font-size-05: $_base;
+// Larger sizes
+$font-size-06: $font-size-05 * $_multiplier;
+$font-size-07: $font-size-06 * $_multiplier;
+$font-size-08: $font-size-07 * $_multiplier;
+$font-size-09: $font-size-08 * $_multiplier;
+$font-size-10: $font-size-09 * $_multiplier;
+$font-size-11: $font-size-10 * $_multiplier;

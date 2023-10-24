@@ -1,0 +1,28 @@
+@use 'sass:color' as sass-color;
+@use '../1-settings/space';
+@use '../1-settings/logo';
+@use '../1-settings/color';
+
+.twid-logo-lockup {
+
+  svg {
+    display: block;
+    height: auto;
+  }
+
+  &__logo {
+    width: logo.$width;
+    max-width: logo.$max-width;
+    margin: 0 auto;
+  }
+
+  &__logotype {
+    width: 100%;
+    max-width: 15rem;
+    margin: clamp(space.$scale-01, 4vw, space.$scale-07) auto 0 auto;
+  }
+
+  @media (prefers-color-scheme: light) {
+    filter: drop-shadow(0 0.15rem 0.3rem sass-color.change(color.$purple, $alpha: 0.5));
+  }
+}

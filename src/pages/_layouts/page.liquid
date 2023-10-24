@@ -9,12 +9,10 @@
 
 {% block body %}
   <header>
-    <h1>{{ title }}</h1>
+    {%  render 'logo-lockup.liquid' %}
   </header>
   <main>
     {{ content | raw }}
   </main>
-  <footer>
-    <p>&copy; Nils Hesse &amp; <a href="https://cirrus.twiddles.com/">James Nash</a>.</p>
-  </footer>
+  {% render 'shared-svg-defs.liquid' %}
 {% endblock content %}

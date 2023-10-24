@@ -7,8 +7,8 @@
   "scripts": {
     "site:build": "eleventy",
     "site:serve": "eleventy --serve",
-    "styles:build": "sass src/styles/index.scss dist/styles.css",
-    "styles:watch": "sass --watch src/styles/index.scss dist/styles.css",
+    "styles:build": "sass src/styles/:dist/",
+    "styles:watch": "sass --watch src/styles/:dist/",
     "build": "npm-run-all *:build",
     "start": "npm-run-all --parallel site:serve styles:watch",
     "clean": "del dist/*"

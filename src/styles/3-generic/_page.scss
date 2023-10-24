@@ -1,0 +1,49 @@
+@use '../1-settings/typography';
+@use '../1-settings/space';
+@use '../1-settings/logo';
+@use '../1-settings/color';
+
+:root {
+  --twid-gradient-brand-stop-0: currentColor;
+  --twid-gradient-brand-stop-1: currentColor;
+
+  @media (prefers-color-scheme: dark) {
+    --twid-gradient-brand-stop-0: #{color.$purple};
+    --twid-gradient-brand-stop-1: #{color.$orange};
+  }
+}
+
+body {
+  font-family: typography.$font-primary;
+  margin: 0;
+  padding: space.$default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+  line-height: typography.$line-height-default;
+  background-color: white;
+  color: black;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: black;
+    color: white;
+  }
+}
+
+body > header,
+main,
+body > footer {
+  width: 100%;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+body > header {
+  margin-bottom: space.$scale-11;
+}
+
+main > :last-child {
+  margin-bottom: 0;
+}

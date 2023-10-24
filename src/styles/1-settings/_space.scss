@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+$_multiplier: 1.2;
+$_base: 1rem;
+
+// Spacing scale
+$scale-05: $_base;
+// Larger sizes
+$scale-06: $scale-05 * $_multiplier;
+$scale-07: $scale-06 * $_multiplier;
+$scale-08: $scale-07 * $_multiplier;
+$scale-09: $scale-08 * $_multiplier;
+$scale-10: $scale-09 * $_multiplier;
+$scale-11: $scale-10 * $_multiplier;
+
+// Smaller sizes
+$scale-04: math.div($scale-05, $_multiplier);
+$scale-03: math.div($scale-04, $_multiplier);
+$scale-02: math.div($scale-03, $_multiplier);
+$scale-01: math.div($scale-02, $_multiplier);
+
+// Semantic tokens
+$default: $scale-05;
