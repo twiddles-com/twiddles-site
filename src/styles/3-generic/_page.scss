@@ -16,7 +16,12 @@
 body {
   font-family: typography.$font-primary;
   margin: 0;
-  padding: space.$default;
+  padding:
+    calc(#{space.$default} +  env(safe-area-inset-top))
+    calc(#{space.$default} +  env(safe-area-inset-right))
+    calc(#{space.$default} +  env(safe-area-inset-bottom))
+    calc(#{space.$default} +  env(safe-area-inset-left))
+  ;
   display: flex;
   flex-direction: column;
   justify-content: center;
