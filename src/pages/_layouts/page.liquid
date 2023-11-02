@@ -1,19 +1,25 @@
 {% layout "./html.liquid" %}
 
 {% block head %}
+  {{ block.super }}
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#bb00e5">
-  {{ block.super }}
+  <meta property="og:image" content="{{ site.url }}/img/twiddles-poster.jpg">
+  <meta property="og:image:width" content="2560">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Twiddles">
+  <link about="http://meatspace.twiddles.com/uri/twiddles" rel="schema:url" href="{{ site.url }}/">
+  <link about="http://meatspace.twiddles.com/uri/twiddles" rel="schema:logo" href="{{ site.url }}/img/twiddles-logo.svg">
 {% endblock head %}
 
 
 {% block body %}
-  <header>
+  <header {{ headerAttributes }}>
     {%  render 'logo-lockup.liquid' %}
   </header>
-  <main>
+  <main {{ mainAttributes }}>
     {{ content | raw }}
   </main>
   {% render 'shared-svg-defs.liquid' %}

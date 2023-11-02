@@ -9,7 +9,7 @@
     {% if description %}<meta name="description" content="{{ description }}">{% endif  %}
   {%- endblock head %}
   </head>
-  <body>
+  <body {{ bodyAttributes }}>
   {% block body -%}
     {{ content | raw }}
   {%- endblock body %}
